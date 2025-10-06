@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #e0e0e0;
+    margin: 5px auto;
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+li a:hover {
+    color: #0077ff;
+    font-weight: bold;
+}
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #777;
+}
