@@ -3,7 +3,7 @@ const animeList = [
     {
         name: "Tensura",
         links: {
-            zoro: "https://zoronime.com/anime/tensura-isekai-maou-to-shoukan-shoujo-no-dorei-majutsu/",
+            zoro: "https://zoronime.com/anime/tensura",
             bilibili: "https://www.bilibili.tv/id/search-result?q=Tensura"
         }
     },
@@ -87,3 +87,4 @@ bgColorBtn.addEventListener("click", () => {
 body.addEventListener("dblclick", () => {
     body.classList.toggle("dark-mode");
 });
+
