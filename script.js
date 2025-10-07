@@ -3,21 +3,21 @@ const animeList = [
         name: "Tensura",
         links: {
             zoro: "https://zoronime.com/?s=Tensura",
-            bilibili: "https://www.bilibili.tv/id/search-result?q=Tensura"
+            Bilibili: "https://www.bilibili.tv/id/search-result?q=Tensura"
         }
     },
     {
         name: "One Piece",
         links: {
             zoro: "https://zoronime.com/anime/one-piece/",
-            bilibili: "https://www.bilibili.tv/id/search-result?q=One-piece"
+            Bilibili: "https://www.bilibili.tv/id/search-result?q=One-piece"
         }
     },
     {
         name: "Boku no Hero",
         links: {
             zoro: "https://zoronime.com/?s=Boku-no-hero",
-            bilibili: "https://www.bilibili.tv/id/search-result?q=boku-no-hero"
+            Bilibili: "https://www.bilibili.tv/id/search-result?q=boku-no-hero"
         }
     }
 ];
@@ -49,3 +49,4 @@ button.addEventListener("click", () => {
         button.textContent = "Tampilkan Daftar Anime";
     }
 });
+
