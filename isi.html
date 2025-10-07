@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Anime</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0a1d3b;
+      color: white;
+      transition: background-color 0.5s;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+    }
+
+    img {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .info {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    button {
+      background-color: white;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 5px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #ddd;
+    }
+
+    #colorButton {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background-color: #0055ff;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="animeInfo"></div>
+
+  <div style="text-align:center; margin-bottom: 40px;">
+    <button onclick="window.location.href='daftar.html'">Kembali ke Daftar</button>
+    <button onclick="window.location.href='index.html'">Kembali ke Beranda</button>
+  </div>
+
+  <button id="colorButton" onclick="ubahWarna()">Ubah Warna</button>
+
+  <script>
+    const data = JSON.parse(localStorage.getItem("selectedAnime"));
+    const container = document.getElementById("animeInfo");
+
+    if (data) {
+      container.innerHTML = `
+        <img src="${data.img}" alt="${data.name}">
+        <div class="info">
+          <h1>${data.name}</h1>
+          <p><b>Genre:</b> ${data.genre}</p>
+          <p><b>Rating:</b> ${data.rating}</p>
+          <p><b>Sinopsis:</b> ${data.synopsis}</p>
+          <button onclick="pilihWeb()">Tonton Sekarang</button>
+        </div>
+      `;
+    }
+
+    function pilihWeb() {
+      const pilihan = prompt("Pilih tempat menonton:\n1. Zoronime\n2. Bilibili");
+      if (pilihan == "1") window.open("https://zoronime.id/", "_blank");
+      else if (pilihan == "2") window.open("https://www.bilibili.tv/id", "_blank");
+      else alert("Pilihan tidak valid!");
+    }
+
+    let darkMode = true;
+    function ubahWarna() {
+      document.body.style.backgroundColor = darkMode ? "#2a52be" : "#0a1d3b";
+      darkMode = !darkMode;
+    }
+  </script>
+</body>
+</html>
