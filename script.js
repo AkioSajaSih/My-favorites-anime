@@ -3,7 +3,7 @@ const animeList = [
     {
         name: "Tensura",
         links: {
-            zoro: "https://zoronime.com/anime/tensura",
+            zoro: "https://zoronime.com/anime/tensura-nikki-tensei-shitara-slime-datta-ken/",
             bilibili: "https://www.bilibili.tv/id/search-result?q=Tensura"
         }
     },
@@ -87,4 +87,5 @@ bgColorBtn.addEventListener("click", () => {
 body.addEventListener("dblclick", () => {
     body.classList.toggle("dark-mode");
 });
+
 
